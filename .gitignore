@@ -1,0 +1,13 @@
+.lh
+*.lock
+*.log
+*.manifest
+*.map
+
+dist
+public
+build
+index.js
+node_modules
+./*.js
+tmp/

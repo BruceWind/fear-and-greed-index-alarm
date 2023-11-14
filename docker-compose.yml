@@ -1,0 +1,9 @@
+version: '3'
+services:
+  puppeteer:
+    build: .
+    cap_add:
+      - SYS_ADMIN
+      - NET_ADMIN
+    security_opt:
+      - seccomp=chrome.json

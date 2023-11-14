@@ -1,0 +1,28 @@
+{
+  "type": "commonjs",
+  "name": "fear-greed-index-alarm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BruceWind/fear-greed-index-alarm.git"
+  },
+  "keywords": [
+    "cnn",
+    "stock",
+    "fearandgreed"
+  ],
+  "author": "Bruce",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BruceWind/fear-greed-index-alarm/issues"
+  },
+  "homepage": "https://github.com/BruceWind/fear-greed-index-alarm#readme",
+  "dependencies": {
+    "puppeteer": "^21.5.1"
+  }
+}
