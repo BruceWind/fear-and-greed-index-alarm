@@ -7,7 +7,6 @@
 dist
 public
 build
-index.js
 node_modules
 ./*.js
 tmp/

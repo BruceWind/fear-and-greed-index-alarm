@@ -8,7 +8,7 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 /**
  * 
  * @param {string} targetUrl, 
- * @returns {Promise<number>} 1 if success, 0 if fail.
+ * @returns {Promise<number>} -1 if fail, or suc.
  */
 async function crawl(targetUrl) {
 
@@ -38,7 +38,7 @@ async function crawl(targetUrl) {
 
 
         browser = await puppeteer.launch(options);
-        console.log("browser isConnected ", browser.isConnected());
+        // console.log("browser isConnected ", browser.isConnected());
         const page = await browser.newPage();
         // Add Headers 
         await page.setExtraHTTPHeaders({
@@ -55,48 +55,24 @@ async function crawl(targetUrl) {
         const preloadFile = fs.readFileSync('./preload.js', 'utf8');
         await page.evaluateOnNewDocument(preloadFile);
 
-        await page.goto(targetUrl);            // go to site
+        await page.goto(targetUrl);
+        const selector = 'pre';
+        await page.waitForSelector(selector);
 
-        await page.waitForTimeout(6000);
-
-        let elements = await page.evaluate(() => {
-            let els = Array.from(document.body.querySelectorAll('#marketFeatureRibbon > div > div:nth-child(2) > div > div > div > div > div > div > div.market-fng-gauge__dial-number > span'));
-
-            return els;
-        });
-        console.log('elements size: ' + elements.length);
-        console.log("text: ", JSON.stringify(elements.map((el) => el.textContent)));
-
-        for (let i = 0; i < elements.length; i++) {
-            let spanElement = await elements[i];
-            var data = await (await spanElement.getProperty('textContent')).jsonValue();
-            console.log("spanElement data: ", data);
-        }
-
-
-        // console.log("elements: ", elements.length);
-        // to find span from element, and 
-
-
-        // // #hplogo - selector
-        // await page.waitForSelector(SCREENSHOT_SELECTOR);             // wait for the selector to load
-        // const logo = await page.$(SCREENSHOT_SELECTOR);              // declare a variable with an ElementHandle
-        // const box = await logo.boundingBox();              // this method returns an array of geometric parameters of the element in pixels.
-        // const x = box['x'];                                // coordinate x
-        // const y = box['y'];                                // coordinate y
-        // const w = box['width'];                            // area width
-        // const h = box['height'];                           // area height
-        // await page.screenshot({ 'path': 'logo.png', 'clip': { 'x': x, 'y': y, 'width': w, 'height': h } });     // take screenshot of the required area in puppeteer
-        // await browser.close();                             // close browser
-        console.log("screenshot done");
+        let data = await page.$eval(selector, (element) => element.textContent);
+        let data_json = JSON.parse(data);
+        const fngIndex = data_json?.fear_and_greed?.score;
+        if (isNaN(fngIndex)) throw new Error("fngIndex is not a number");
+        console.log("fngIndex: ", fngIndex);
+        return fngIndex;
     }
     catch (e) {
         console.log("error: ", e);
-        return 0;
+        return -1;
     } finally {
         if (browser) await browser.close();
     }
-    return 1;
+    return -1;
 }
 
 module.exports = {
