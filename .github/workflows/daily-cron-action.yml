@@ -1,6 +1,6 @@
 # nothing
 
-name: Scan and Push
+name: Today Status Check
 # daily job
 on:
   push:
