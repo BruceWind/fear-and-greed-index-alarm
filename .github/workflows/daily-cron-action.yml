@@ -1,0 +1,34 @@
+# nothing
+
+name: Scan and Push
+# daily job
+on:
+  workflow_dispatch:
+  schedule:
+    - # daily job at 01:00 with  UTC time
+      cron: "0 1 * * *"
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: self-hosted
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Setup Git Infomation
+        run: |
+          git config --global user.name 'bot'
+          git config --global user.email 'robotTest@github.com'
+      - name: Recording
+        run: |
+          npm install --global yarn && yarn install
+          node .
