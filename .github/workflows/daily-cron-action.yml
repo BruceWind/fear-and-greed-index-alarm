@@ -3,6 +3,7 @@
 name: Scan and Push
 # daily job
 on:
+  push:
   workflow_dispatch:
   schedule:
     - # daily job at 01:00 with  UTC time
