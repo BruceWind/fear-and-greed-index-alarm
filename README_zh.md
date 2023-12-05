@@ -9,6 +9,11 @@ Fear-And-Greed指数在投资和交易中具有重要的作用。它是一种衡
 FearNGreed Index Alarm利用 GitHub Actions 每天从 CNN 获取恐惧与贪婪指数。该指数用作市场情绪的指标。仓库包含一个脚本，用于检查获取的指数值是否超出指定的阈值范围。如果超出了定义的范围，将在 GitHub Actions 工作流中引发异常。您将收到github 发来的email通知。
 
 
+如果超出设定范围，则可见如下图的actions抱错:
+<img width="992" alt="Screenshot 2023-12-01 at 9 47 26 AM" src="https://github.com/BruceWind/fear-and-greed-index-alarm/assets/6711309/bd36c7cc-2260-4a69-905d-3ed0be1b6a3f">
+
+
+
 今日状态: [![Today Status](https://github.com/BruceWind/fear-and-greed-index-alarm/actions/workflows/daily-cron-action.yml/badge.svg)](https://github.com/BruceWind/fear-and-greed-index-alarm/actions/workflows/daily-cron-action.yml)
 
 ## 设置
