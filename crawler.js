@@ -1,9 +1,7 @@
 const puppeteer = require('puppeteer');
-const CLS_selsector = 'market-fng-gauge__dial-number-value';
+
 const fs = require('fs');
 
-const DATA_URI_V = "cms.cnn.com/_components/market-fng-gauge/instances/markets-fng-feature-ribbon@published";
-const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 
 // this function is so significant, it used to bypass the bot-detector.
