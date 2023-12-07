@@ -56,7 +56,7 @@ async function crawl(targetUrl) {
 
 
     if (!targetUrl) throw new Error("targetUrl is required");
-    console.log("targetUrl: ", targetUrl);
+    // console.log("targetUrl: ", targetUrl);
     let browser;
     try {
         console.log("start crawl");
@@ -71,7 +71,7 @@ async function crawl(targetUrl) {
         let data_json = JSON.parse(data);
         const fngIndex = data_json?.fear_and_greed?.score;
         if (isNaN(fngIndex)) throw new Error("fngIndex is not a number");
-        console.log("fngIndex: ", fngIndex);
+        // console.log("fngIndex: ", fngIndex);
         return fngIndex;
     }
     catch (e) {
