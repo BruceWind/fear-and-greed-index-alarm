@@ -4,8 +4,7 @@
 The FearNGreed Index Alarm is an open-source repository that allows you to fetch CNN Fear and Greed Index every morning using GitHub Actions. This index serves as an indicator of market sentiment. The repository includes a script that checks whether the fetched index value is above or below a specified threshold. If it exceeds the defined range, an exception is raised within the GitHub Actions workflow. You will receive an email notification from github.
 
 In case of out of range, you can see the error like this:
-<img width="992" alt="Screenshot 2023-12-01 at 9 47 26 AM" src="https://github.com/BruceWind/fear-and-greed-index-alarm/assets/6711309/bd36c7cc-2260-4a69-905d-3ed0be1b6a3f">
-
+<img width="1002" alt="Screenshot 2023-12-07 at 12 53 09 PM" src="https://github.com/BruceWind/fear-and-greed-index-alarm/assets/6711309/657dee6a-4388-4bd2-aad0-88b67e1b0313">
 
 
 You can also see today status: [![Today Status](https://github.com/BruceWind/fear-and-greed-index-alarm/actions/workflows/daily-cron-action.yml/badge.svg)](https://github.com/BruceWind/fear-and-greed-index-alarm/actions/workflows/daily-cron-action.yml)

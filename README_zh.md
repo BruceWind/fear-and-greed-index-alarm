@@ -10,7 +10,8 @@ FearNGreed Index Alarm利用 GitHub Actions 每天从 CNN 获取恐惧与贪婪�
 
 
 如果超出设定范围，则可见如下图的actions抱错:
-<img width="992" alt="Screenshot 2023-12-01 at 9 47 26 AM" src="https://github.com/BruceWind/fear-and-greed-index-alarm/assets/6711309/bd36c7cc-2260-4a69-905d-3ed0be1b6a3f">
+<img width="1002" alt="Screenshot 2023-12-07 at 12 53 09 PM" src="https://github.com/BruceWind/fear-and-greed-index-alarm/assets/6711309/657dee6a-4388-4bd2-aad0-88b67e1b0313">
+
 
 
 
