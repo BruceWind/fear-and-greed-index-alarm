@@ -32,7 +32,9 @@ jobs:
         run: |
           git config --global user.name 'bot'
           git config --global user.email 'robotTest@github.com'
-      - name: Recording
+      - name: Preparing
         run: |
           npm install --global yarn && yarn install
+      - name: Execute
+        run: |
           node .
