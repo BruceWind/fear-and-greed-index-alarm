@@ -1,6 +1,6 @@
 const { crawl } = require('./crawler');
 
-const targetUrl = 'https://production.dataviz.cnn.io/index/fearandgreed/graphdata';
+const targetUrl = 'aHR0cHM6Ly9wcm9kdWN0aW9uLmRhdGF2aXouY25uLmlvL2luZGV4L2ZlYXJhbmRncmVlZC9ncmFwaGRhdGE=';
 
 // serveral static fields for console color into background.
 const Reset = "\x1b[0m";
@@ -17,7 +17,7 @@ const BgGreen = "\x1b[42m";
         console.log(`${BgRed}%s${Reset}`, "Please set FNG_MIN and FNG_MAX");
         process.exit(1);
     }
-    const result = await crawl(targetUrl);
+    const result = await crawl(Buffer.from(targetUrl, 'base64').toString('utf-8'));
     console.log("FNG for toady is: ", result);
     if (result <= FNG_MIN || result >= FNG_MAX) {
         console.log(`${BgRed}%s${Reset}`, "FNG is out of range, pls check your stock account.");
