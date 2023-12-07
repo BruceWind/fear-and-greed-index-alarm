@@ -19,7 +19,7 @@ async function createBrowserToAntiBotDetector() {
 
     const options = {
         args,
-        headless: true,
+        headless: 'new',
         ignoreHTTPSErrors: true,
         userDataDir: './tmp'
     };
