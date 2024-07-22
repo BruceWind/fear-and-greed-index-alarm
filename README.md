@@ -29,4 +29,4 @@ To set up the FearNGreed Index Alarm, follow these steps:
 Once you have set up the FearNGreed Index Alarm and added the necessary secrets, the workflow will automatically run according to the schedule. If the fetched Fear and Greed Index value exceeds the defined range, a notification will be triggered. You can customize the notification settings based on your preferences and requirements.
 
 
-In addition, would you like to use my technical analys repo: [BruceWind/StockSignalWatch](https://github.com/BruceWind/StockSignalWatch). It also run with github actions.
+In addition, would you like to use my technical analysis repo: [BruceWind/StockSignalWatch](https://github.com/BruceWind/StockSignalWatch). It also run with github actions.
