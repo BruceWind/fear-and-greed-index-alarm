@@ -22,7 +22,6 @@ To set up the FearNGreed Index Alarm, follow these steps:
    - `FNG_MAX`: The maximum threshold value for the Fear and Greed Index.
    Make sure to provide the appropriate values for these secrets.
 6. Once you have added the secrets, the FearNGreed Index Alarm will be able to access them during the GitHub Actions workflow.
-7. Commit the changes to your forked repository. The GitHub Actions workflow will now be triggered according to the specified schedule.
 
 ## Notification
 
