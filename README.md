@@ -30,6 +30,6 @@ Once you have set up the FearNGreed Index Alarm and added the necessary secrets,
 
 ## Advertisement
 
-If you want to use a AI stock watch service and notification service, or don't know how to use teach indicators, I recommand you to access [www.investmentstrategy365.com](https://www.investmentstrategy365.com).
+If you want to use a AI stock watch service and notification service, or don't know how to use tech indicators, I recommand you to access [www.investmentstrategy365.com](https://www.investmentstrategy365.com).
 
-You can see our past notifications in this link: [www.investmentstrategy365.com/monitor?history=1](https://www.investmentstrategy365.com/monitor?history=1).
+You can see our past advices in this link: [www.investmentstrategy365.com/monitor?history=1](https://www.investmentstrategy365.com/monitor?history=1).
