@@ -1,6 +1,6 @@
 [中文](/README_zh.md)
 ## Warning. 
-⚠️ Due to github limits action use as cron, I stopped maintaining this repo.
+⚠️ Because github limits action use as cron, I stopped maintaining this repo.
 
 # Fear-And-Greed Index Alarm
 
