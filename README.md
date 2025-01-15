@@ -1,4 +1,7 @@
 [中文](/README_zh.md)
+## Warning. 
+⚠️ Due to github limits action use as cron, I stopped maintaining this repo.
+
 # Fear-And-Greed Index Alarm
 
 The FearNGreed Index Alarm is an open-source repository that allows you to fetch CNN Fear and Greed Index every morning using GitHub Actions. This index serves as an indicator of market sentiment. The repository includes a script that checks whether the fetched index value is above or below a specified threshold. If it exceeds the defined range, an exception is raised within the GitHub Actions workflow. You will receive an email notification from github.
@@ -26,6 +29,7 @@ To set up the FearNGreed Index Alarm, follow these steps:
 ## Notification
 
 Once you have set up the FearNGreed Index Alarm and added the necessary secrets, the workflow will automatically run according to the schedule. If the fetched Fear and Greed Index value exceeds the defined range, a notification will be triggered. You can customize the notification settings based on your preferences and requirements.
+
 
 
 ## Advertisement
